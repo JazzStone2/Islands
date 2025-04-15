@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: abab01c17bc7cb942b6561ca47f64723
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - torchLight: {instanceID: 0}
+  - torchParticles: {fileID: 393351335040423780, guid: e369727cf65f4cf408e136b72fe0857b, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: ae5d36f52ab455049bae80a8ba29cc11
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - minigameUI: {fileID: 2211302656508157836, guid: 49c585834cf3bef4eaf46b8fdad1cad7, type: 3}
+  - customCursor: {fileID: 2800000, guid: c182fa0a485f14a49b2f8dca25899afa, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
