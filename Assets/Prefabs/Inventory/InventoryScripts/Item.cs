@@ -46,5 +46,6 @@ public enum ActionType
     Fishing,
     Attack,
     Consume,
-    CraftMaterial
+    CraftMaterial,
+    CheckedPlacement,
 }
