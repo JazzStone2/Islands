@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2842254139995365313}
   - component: {fileID: 5420664937114427285}
   - component: {fileID: -5754394748162723570}
+  - component: {fileID: 2069875932669444554}
   m_Layer: 8
   m_Name: WallPlaced
   m_TagString: Untagged
@@ -159,3 +160,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2069875932669444554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7680604253484856264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2733e2f24b2f964dbad68af0e2e966a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debrisPrefab: {fileID: 8626573829664967917, guid: 627bc70091d46cc408e7e55a280c41d8, type: 3}
+  hitsToBreak: 5
+  interactionRange: 3

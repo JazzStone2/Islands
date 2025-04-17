@@ -8,7 +8,7 @@ public class BuildManager : MonoBehaviour
     private GameObject previewObject; // Temporary ghost object for previewing placement
     public List<GameObject> invalidTilemaps; // List of invalid tilemap GameObjects
     private List<Collider2D> invalidTilemapColliders = new List<Collider2D>(); // Colliders from invalid tilemaps
-    private HashSet<Vector2Int> occupiedTiles = new HashSet<Vector2Int>(); // Tracks occupied tiles
+    public HashSet<Vector2Int> occupiedTiles = new HashSet<Vector2Int>(); // Tracks occupied tiles
 
     public float tileSize = 1f; // Size of a single tile
 
@@ -104,7 +104,7 @@ public class BuildManager : MonoBehaviour
         }
     }
 
-    bool IsPlacementValid(Vector3 position)
+    public bool IsPlacementValid(Vector3 position)
     {
         Vector2Int tilePosition = WorldToTilePosition(position);
 
@@ -197,7 +197,7 @@ public class BuildManager : MonoBehaviour
         return new Vector3(x, y, 0);
     }
 
-    Vector2Int WorldToTilePosition(Vector3 position)
+    public Vector2Int WorldToTilePosition(Vector3 position)
     {
         // Convert world position to tile position
         int x = Mathf.FloorToInt(position.x / tileSize);
