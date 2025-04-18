@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64621f54e39d4ba44bc1bd5b265e17a3, type: 3}
   m_Name: WoodLog
   m_EditorClassIdentifier: 
-  tile: {fileID: 0}
-  type: 6
+  type: 7
   actionType: 5
   range: {x: 5, y: 4}
   damage: 0
   HeathGiven: 0
   stackable: 1
   image: {fileID: -3918130587969064635, guid: ea593778d0bc76044aa002d72c4a7db1, type: 3}
+  prefab: {fileID: 0}

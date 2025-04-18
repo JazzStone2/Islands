@@ -108,6 +108,7 @@ MonoBehaviour:
   floatFrequency: 1
   enableFloating: 1
   item: {fileID: 11400000, guid: 4f4f97e0b87ad4a44a6c5dea452c49bf, type: 2}
+  shadowPrefab: {fileID: 8999288810567945220, guid: 96d84aca3239beb4cbd9cd100513bfb2, type: 3}
 --- !u!61 &3945341686100900654
 BoxCollider2D:
   m_ObjectHideFlags: 0

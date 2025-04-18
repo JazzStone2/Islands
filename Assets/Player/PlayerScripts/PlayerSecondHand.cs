@@ -63,9 +63,7 @@ public class SecondhandItemManager : MonoBehaviour
                 case ActionType.Break:
                     BreakItem(item);
                     break;
-                case ActionType.CraftMaterial:
-                    Debug.Log($"Using crafting material: {item.name}");
-                    break;
+            
                 default:
                     Debug.Log($"Unhandled action for item: {item.name}");
                     break;

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64621f54e39d4ba44bc1bd5b265e17a3, type: 3}
   m_Name: Apple
   m_EditorClassIdentifier: 
-  tile: {fileID: 0}
-  type: 2
+  type: 3
   actionType: 4
   range: {x: 5, y: 4}
   damage: 0
   HeathGiven: 10
   stackable: 1
   image: {fileID: -9150081488217087330, guid: 0da3d350511ca1748ae742ea8dc028ec, type: 3}
+  prefab: {fileID: 0}

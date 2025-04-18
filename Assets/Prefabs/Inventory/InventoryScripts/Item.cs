@@ -31,6 +31,7 @@ public enum ItemType
 {
     BuildingBlock,
     Tool,
+    pickaxe,
     Food,
     Weapon,
     FishingRod,

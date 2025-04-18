@@ -132,4 +132,52 @@ public class InventroyManager : MonoBehaviour
         }
         return null; // Return null if no item is found in the slot
     }
+    public bool HasItem(Item item, int requiredAmount)
+{
+    int itemCount = 0;
+    foreach (var slot in inventorySlots)
+    {
+        InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+        if (itemInSlot != null && itemInSlot.item == item)
+        {
+            itemCount += itemInSlot.count;
+        }
+        if (itemCount >= requiredAmount)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
+public void RemoveItem(Item item, int quantityToRemove)
+{
+    foreach (var slot in inventorySlots)
+    {
+        InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+        if (itemInSlot != null && itemInSlot.item == item)
+        {
+            // Calculate how many items to remove from this slot
+            int removeAmount = Mathf.Min(itemInSlot.count, quantityToRemove);
+            itemInSlot.count -= removeAmount; // Deduct from the slot count
+            quantityToRemove -= removeAmount; // Reduce the remaining quantity to remove
+
+            if (itemInSlot.count <= 0)
+            {
+                Destroy(itemInSlot.gameObject); // Remove the inventory item if count is zero
+            }
+            else
+            {
+                itemInSlot.ResfreshCount(); // Update the count display in the UI
+            }
+
+            if (quantityToRemove <= 0) // Exit early if all required items have been removed
+            {
+                return;
+            }
+        }
+    }
+}
+
+
 }

@@ -11,6 +11,8 @@ public class BuildManager : MonoBehaviour
     public HashSet<Vector2Int> occupiedTiles = new HashSet<Vector2Int>(); // Tracks occupied tiles
 
     public float tileSize = 1f; // Size of a single tile
+    public List<GameObject> uiElements; // List of UI elements to check
+
 
     void Start()
     {
@@ -34,17 +36,26 @@ public class BuildManager : MonoBehaviour
         }
     }
 
-    void Update()
+void Update()
+{
+    // Check if any UI is active
+    foreach (GameObject ui in uiElements)
     {
-        // Update the preview object position
-        UpdatePreview();
-
-        // Check if the left mouse button is clicked
-        if (Input.GetMouseButtonDown(0))
+        if (ui.activeSelf)
         {
-            PlaceBuilding();
+            return; // Exit the method if a UI element is active
         }
     }
+
+    // Update the preview object position
+    UpdatePreview();
+
+    // Check if the left mouse button is clicked
+    if (Input.GetMouseButtonDown(0))
+    {
+        PlaceBuilding();
+    }
+}
 
     void UpdatePreview()
     {
@@ -136,53 +147,63 @@ public class BuildManager : MonoBehaviour
         }
     }
 
-    void PlaceBuilding()
+void PlaceBuilding()
+{
+    // Check if any UI is active
+    foreach (GameObject ui in uiElements)
     {
-        // Get the currently selected item from the inventory
-        Item selectedItem = InventroyManager.instance.GetSelectedItem(false); // False ensures the item isn't prematurely deleted
-
-        // Check if the selected item meets the criteria for building
-        if (selectedItem != null && selectedItem.prefab != null && selectedItem.type == ItemType.BuildingBlock && selectedItem.actionType == ActionType.Place)
+        if (ui.activeSelf)
         {
-            Vector2 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 snappedPosition = GetSnappedPosition(mousePosition);
-            Vector2Int tilePosition = WorldToTilePosition(snappedPosition);
+            Debug.Log("Cannot place items while a UI element is active!");
+            return; // Exit the method if a UI element is active
+        }
+    }
 
-            // Check if the click is within the max build distance
-            if (Vector2.Distance(transform.position, snappedPosition) <= maxBuildDistance)
+    // Get the currently selected item from the inventory
+    Item selectedItem = InventroyManager.instance.GetSelectedItem(false);
+
+    // Check if the selected item meets the criteria for building
+    if (selectedItem != null && selectedItem.prefab != null && selectedItem.type == ItemType.BuildingBlock && selectedItem.actionType == ActionType.Place)
+    {
+        Vector2 mousePosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 snappedPosition = GetSnappedPosition(mousePosition);
+        Vector2Int tilePosition = WorldToTilePosition(snappedPosition);
+
+        // Check if the click is within the max build distance
+        if (Vector2.Distance(transform.position, snappedPosition) <= maxBuildDistance)
+        {
+            // Check if placement is valid
+            if (IsPlacementValid(snappedPosition))
             {
-                // Check if placement is valid
-                if (IsPlacementValid(snappedPosition))
+                // Instantiate the building prefab at the snapped position
+                GameObject placedObject = Instantiate(selectedItem.prefab, snappedPosition, Quaternion.identity);
+
+                // Enable the collider on the placed object
+                Collider2D collider = placedObject.GetComponent<Collider2D>();
+                if (collider != null)
                 {
-                    // Instantiate the building prefab at the snapped position
-                    GameObject placedObject = Instantiate(selectedItem.prefab, snappedPosition, Quaternion.identity);
-
-                    // Enable the collider on the placed object
-                    Collider2D collider = placedObject.GetComponent<Collider2D>();
-                    if (collider != null)
-                    {
-                        collider.enabled = true; // Enable collider after placement
-                    }
-
-                    // Mark the tile as occupied
-                    occupiedTiles.Add(tilePosition);
-
-                    // Use the item (remove it from inventory)
-                    InventroyManager.instance.GetSelectedItem(true);
-
-                    // Destroy the preview object after placement
-                    if (previewObject != null)
-                    {
-                        Destroy(previewObject);
-                    }
+                    collider.enabled = true; // Enable collider after placement
                 }
-                else
+
+                // Mark the tile as occupied
+                occupiedTiles.Add(tilePosition);
+
+                // Use the item (remove it from inventory)
+                InventroyManager.instance.GetSelectedItem(true);
+
+                // Destroy the preview object after placement
+                if (previewObject != null)
                 {
-                    Debug.Log("Invalid placement area!");
+                    Destroy(previewObject);
                 }
+            }
+            else
+            {
+                Debug.Log("Invalid placement area!");
             }
         }
     }
+}
     public bool IsTileOccupied(Vector2Int tilePosition)
 {
     return occupiedTiles.Contains(tilePosition);
