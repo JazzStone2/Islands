@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 1786813726253635241}
   - component: {fileID: 9086592533727765823}
   - component: {fileID: 3433109096799363166}
+  - component: {fileID: 2685264915268892534}
   m_Layer: 0
   m_Name: Tree
   m_TagString: Untagged
@@ -275,3 +276,18 @@ MonoBehaviour:
   shakeIntensity: 0.1
   appleCooldownTime: 900
   interactionRange: 5
+--- !u!114 &2685264915268892534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6077962277428472575}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54ff972bbc2e3d7449ae8579578f43c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leafPrefab: {fileID: 7426042140154020269, guid: 452e3d23151a2ed429c0bb28b6d645c9, type: 3}
+  treePosition: {fileID: 8664908303577971081}
+  spawnInterval: 1
