@@ -41,14 +41,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 7200044248432465912}
     m_Modifications:
     - target: {fileID: 1122899853322769214, guid: 196cc8b42dda1954689e59b2224e4af8, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122899853322769214, guid: 196cc8b42dda1954689e59b2224e4af8, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1122899853322769214, guid: 196cc8b42dda1954689e59b2224e4af8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.044
       objectReference: {fileID: 0}
@@ -95,35 +87,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2563222301804178965, guid: 196cc8b42dda1954689e59b2224e4af8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3433159677645548741}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 196cc8b42dda1954689e59b2224e4af8, type: 3}
 --- !u!4 &1506326197147090769 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1122899853322769214, guid: 196cc8b42dda1954689e59b2224e4af8, type: 3}
   m_PrefabInstance: {fileID: 1977885927509683311}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &4098480031692538490 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2563222301804178965, guid: 196cc8b42dda1954689e59b2224e4af8, type: 3}
-  m_PrefabInstance: {fileID: 1977885927509683311}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3433159677645548741
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4098480031692538490}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00617118801503042958ac718c733880, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemPrefab: {fileID: 8626573829664967917, guid: 627bc70091d46cc408e7e55a280c41d8, type: 3}
-  hitsToBreak: 1
-  shakeDuration: 0.5
-  shakeIntensity: 0.1
-  interactionRange: 5

@@ -35,7 +35,7 @@ public class InventroyManager : MonoBehaviour
         if (Input.inputString != null)
         {
             bool isNumber = int.TryParse(Input.inputString, out int number);
-            if (isNumber && number > 0 && number <= 6) // Restrict to 6 slots
+            if (isNumber && number > 0 && number <= 9) // Restrict to 6 slots
             {
                 ChangeSelectedSlot(number - 1); // Convert to zero-based index
             }
@@ -48,9 +48,9 @@ public class InventroyManager : MonoBehaviour
             int newValue = selectedSlot + (scroll > 0 ? -1 : 1); // Scroll up decreases slot, scroll down increases
             if (newValue < 0) // Wrap around to the last slot if scrolling up past the first slot
             {
-                newValue = 5; // Restrict to 0-5 index for hotbar (six slots)
+                newValue = 8; // Restrict to 0-5 index for hotbar (six slots)
             }
-            else if (newValue > 5) // Wrap around to the first slot if scrolling down past the last slot
+            else if (newValue > 8) // Wrap around to the first slot if scrolling down past the last slot
             {
                 newValue = 0;
             }

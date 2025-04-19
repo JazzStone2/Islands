@@ -92,7 +92,7 @@ public class DayAndNight : MonoBehaviour
             else if (hour > 12) hour -= 12; // Convert to 12-hour clock for PM times
 
             // Display time as "HH:MM AM/PM"
-            timeDisplay.text = string.Format("{0:00}:{1:00} {2}", hour, minute, period);
+            timeDisplay.text = string.Format("{0:00}:{1:00}", hour, minute, period);
         }
         else
         {
