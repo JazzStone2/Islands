@@ -84,6 +84,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TreeStump
       objectReference: {fileID: 0}
+    - target: {fileID: 5290276004082897944, guid: 196cc8b42dda1954689e59b2224e4af8, type: 3}
+      propertyPath: itemPrefab
+      value: 
+      objectReference: {fileID: 1849382361675088443, guid: 52f93447a9123694fa70d7adb1522a79, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -15,5 +15,6 @@ MonoBehaviour:
   craftedItem: {fileID: 11400000, guid: 868668176982d914c8137f15fe267f35, type: 2}
   requiredMaterials:
   - {fileID: 11400000, guid: bb16238976f0ea84998c5d3afedec893, type: 2}
-  - {fileID: 11400000, guid: 4f4f97e0b87ad4a44a6c5dea452c49bf, type: 2}
+  - {fileID: 11400000, guid: 88f453856c78aaf418e25666137c8c2b, type: 2}
   requiredAmounts: 0100000001000000
+  AmountGiven: 0
