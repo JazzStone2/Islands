@@ -6,7 +6,7 @@ public class CampfireInteraction : MonoBehaviour
     public GameObject uiPanel; // Reference to the UI panel to show
     public Transform player;  // Reference to the player's transform
     public float interactionDistance = 2f; // Max distance for interaction
-
+    public GameObject campFirePrefab;
     private bool isNearCampfire = false;
 
     void Start()
@@ -37,6 +37,7 @@ public class CampfireInteraction : MonoBehaviour
         }
          if(isNearCampfire && Input.GetMouseButtonDown(0) && selectedItem.actionType == ActionType.Break)
          {
+            Instantiate(campFirePrefab, transform.position, Quaternion.identity);
             DestroyImmediate(gameObject);
         }
     }

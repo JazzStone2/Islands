@@ -126,9 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 489a25a1cd2d01d4bb0708582073af0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiPanel: {fileID: 0}
+  uiPanel: {fileID: 8392024177832315005, guid: cd65231eb043abb4c8604a73a228ffe7, type: 3}
   player: {fileID: 0}
-  interactionDistance: 1.36
+  interactionDistance: 2
+  campFirePrefab: {fileID: 1679465020112175528, guid: e970d556cd9c05a45b667e6614e00b64, type: 3}
 --- !u!61 &2642209396353770430
 BoxCollider2D:
   m_ObjectHideFlags: 0
