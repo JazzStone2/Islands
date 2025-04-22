@@ -37,7 +37,8 @@ public enum ItemType
     FishingRod,
     Axe,
     CraftMaterial,
-    Shovel
+    Shovel,
+    Ladder
 }
 
 public enum ActionType
@@ -47,6 +48,8 @@ public enum ActionType
     Fishing,
     Attack,
     Consume,
+    Cookable,
     CraftMaterial,
     CheckedPlacement,
+    Climbing
 }

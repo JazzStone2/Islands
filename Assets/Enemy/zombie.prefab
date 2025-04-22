@@ -199,7 +199,7 @@ MonoBehaviour:
   currentHealth: 0
   damageEffectPrefab: {fileID: 0}
   deathEffectPrefab: {fileID: 0}
-  lootPrefab: {fileID: 6829412350653571835, guid: ed5a948ded371ee4791b140a5c2bca81, type: 3}
+  lootPrefab: {fileID: 1835132778813517532, guid: 6fc892a282fe3af40896ae046cda168a, type: 3}
   loseHealthAtDay: 1
   healthLossRate: 50
 --- !u!114 &4166458216478418766

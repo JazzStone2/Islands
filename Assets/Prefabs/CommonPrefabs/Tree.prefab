@@ -291,4 +291,4 @@ MonoBehaviour:
   leafPrefab: {fileID: 7426042140154020269, guid: 452e3d23151a2ed429c0bb28b6d645c9, type: 3}
   treePosition: {fileID: 8664908303577971081}
   spawnAreaSize: {x: 2, y: 2}
-  spawnInterval: 1
+  spawnInterval: 3

@@ -36,7 +36,7 @@ public class LeafMovement : MonoBehaviour
     public float swayAmplitude = 0.5f; // Swaying horizontal amplitude
     public float swayFrequency = 1.0f; // Swaying speed
     public float rotationSpeed = 50.0f; // Rotation speed
-    public float lifespan = 5.0f; // Time before the leaf despawns
+    public float lifespan = 3.0f; // Time before the leaf despawns
     public Vector3 minScale = new Vector3(0.1f, 0.1f, 0.1f); // Minimum scale before destroying
 
     private Vector3 startPosition;
