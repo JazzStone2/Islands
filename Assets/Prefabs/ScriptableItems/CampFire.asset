@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: CampFire
   m_EditorClassIdentifier: 
   type: 0
-  actionType: 0
+  actionType: 1
   range: {x: 5, y: 4}
   damage: 0
   HeathGiven: 0
   stackable: 1
-  image: {fileID: 0}
-  prefab: {fileID: 0}
+  image: {fileID: -1190113738729516196, guid: e8b1551b1b0e68a46b09492e9a8be9e6, type: 3}
+  prefab: {fileID: 5385941353842092101, guid: 36b7d9667a60a2040b4ef32df85c1437, type: 3}

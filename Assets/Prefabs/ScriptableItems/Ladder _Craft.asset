@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc1e6c76e9e6574eb8feb58ed2996d5, type: 3}
   m_Name: Ladder _Craft
   m_EditorClassIdentifier: 
-  craftedItem: {fileID: 0}
-  requiredMaterials: []
-  requiredAmounts: 
+  craftedItem: {fileID: 11400000, guid: f238c7de5f7dc864788115b7c49092cf, type: 2}
+  requiredMaterials:
+  - {fileID: 11400000, guid: 4f4f97e0b87ad4a44a6c5dea452c49bf, type: 2}
+  - {fileID: 11400000, guid: 88f453856c78aaf418e25666137c8c2b, type: 2}
+  requiredAmounts: 0200000003000000
   AmountGiven: 0

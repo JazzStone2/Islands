@@ -18,5 +18,5 @@ MonoBehaviour:
   damage: 0
   HeathGiven: 0
   stackable: 1
-  image: {fileID: 0}
+  image: {fileID: 8460401497469694435, guid: 63a993bc71b6a4749847600f94090f8e, type: 3}
   prefab: {fileID: 0}

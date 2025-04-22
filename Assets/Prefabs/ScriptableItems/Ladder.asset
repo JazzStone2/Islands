@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64621f54e39d4ba44bc1bd5b265e17a3, type: 3}
   m_Name: Ladder
   m_EditorClassIdentifier: 
-  type: 0
-  actionType: 0
+  type: 9
+  actionType: 8
   range: {x: 5, y: 4}
   damage: 0
   HeathGiven: 0
-  stackable: 1
-  image: {fileID: 0}
+  stackable: 0
+  image: {fileID: -1881480615590608629, guid: 4479386a7d80b13498b6d4c32f14489d, type: 3}
   prefab: {fileID: 0}

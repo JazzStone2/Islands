@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc1e6c76e9e6574eb8feb58ed2996d5, type: 3}
   m_Name: CampFire_Craft
   m_EditorClassIdentifier: 
-  craftedItem: {fileID: 0}
-  requiredMaterials: []
-  requiredAmounts: 
-  AmountGiven: 0
+  craftedItem: {fileID: 11400000, guid: 427d7c1917162b44dbbcf71116f6425c, type: 2}
+  requiredMaterials:
+  - {fileID: 11400000, guid: bb16238976f0ea84998c5d3afedec893, type: 2}
+  - {fileID: 11400000, guid: 4f4f97e0b87ad4a44a6c5dea452c49bf, type: 2}
+  requiredAmounts: 0200000002000000
+  AmountGiven: 1
